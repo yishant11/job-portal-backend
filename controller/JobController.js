@@ -3,8 +3,10 @@ const Job = require("../model/JobModel");
 
 exports.GetAllJobDetails = async (req, res) => {
   try {
+
     const JobDetails = await Job.find({});
 
+    console.log("JobDetails :",JobDetails);
 
     if (JobDetails) {
       return res.status(200).json({
